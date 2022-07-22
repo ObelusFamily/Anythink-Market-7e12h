@@ -14,7 +14,7 @@ const SearchBar = (props) => {
   }
 
   return (
-    <span className="product-search-form has-search">
+    <span className="product-search-form has-search" hidden={props.shouldHideSearchBox}>
       <input
         id="search-box"
         type="text"

@@ -9,6 +9,7 @@ import {
   HOME_PAGE_UNLOADED,
   APPLY_TAG_FILTER,
   SEARCH_BOX_UPDATED,
+  GET_PART_CLICKED,
 } from "../../constants/actionTypes";
 
 const Promise = global.Promise;
@@ -18,6 +19,7 @@ const mapStateToProps = (state) => ({
   appName: state.common.appName,
   token: state.common.token,
   searchTerm: state.itemList.searchTerm,
+  isGetPartClicked: state.itemList.isGetPartClicked,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -26,6 +28,7 @@ const mapDispatchToProps = (dispatch) => ({
   onLoad: (tab, pager, payload) =>
     dispatch({ type: HOME_PAGE_LOADED, tab, pager, payload }),
   onUnload: () => dispatch({ type: HOME_PAGE_UNLOADED }),
+  onGetPartClicked: () => dispatch({ type: GET_PART_CLICKED }),
   onSearchBoxUpdate: (searchTerm, pager, payload) =>
     dispatch({ type: SEARCH_BOX_UPDATED, searchTerm, pager, payload }),
 });
@@ -49,7 +52,11 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home-page">
-        <Banner onSearchBoxUpdate={this.props.onSearchBoxUpdate} />
+        <Banner 
+          onSearchBoxUpdate={this.props.onSearchBoxUpdate} 
+          onGetPartClicked={this.props.onGetPartClicked} 
+          isGetPartClicked={this.props.isGetPartClicked}
+        />
 
         <div className="container page">
           <Tags tags={this.props.tags} onClickTag={this.props.onClickTag} />
