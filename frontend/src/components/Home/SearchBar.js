@@ -16,6 +16,7 @@ const SearchBar = (props) => {
   return (
     <span className="product-search-form has-search">
       <input
+        id="search-box"
         type="text"
         placeholder="What is it that you truly desire?"
         value={props.searchTerm}
