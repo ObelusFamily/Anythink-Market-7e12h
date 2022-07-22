@@ -53,7 +53,7 @@ class Home extends React.Component {
 
         <div className="container page">
           <Tags tags={this.props.tags} onClickTag={this.props.onClickTag} />
-          <MainView searchTerm={this.props.searchTerm}/>
+          <MainView searchTerm={this.props.searchTerm} />
         </div>
       </div>
     );
