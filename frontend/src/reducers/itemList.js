@@ -11,6 +11,7 @@ import {
   PROFILE_PAGE_UNLOADED,
   PROFILE_FAVORITES_PAGE_LOADED,
   PROFILE_FAVORITES_PAGE_UNLOADED,
+  GET_PART_CLICKED,
 } from "../constants/actionTypes";
 
 const reducer = (state = {}, action) => {
@@ -69,9 +70,15 @@ const reducer = (state = {}, action) => {
         currentPage: 0,
         tab: action.tab,
         searchTerm: null,
+        isGetPartClicked: false,
       };
     case HOME_PAGE_UNLOADED:
       return {};
+    case GET_PART_CLICKED:
+      return {
+        ...state,
+        isGetPartClicked: true,
+      };
     case CHANGE_TAB:
       return {
         ...state,
