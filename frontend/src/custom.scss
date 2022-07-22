@@ -59,3 +59,13 @@ body {
 .user-info {
   min-width: 800px;
 }
+
+.product-search-form {
+  padding: 0em 1em 0em 1em;
+}
+
+.product-search-form > input {
+  min-width: 400px;
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 0.5em;
+}
