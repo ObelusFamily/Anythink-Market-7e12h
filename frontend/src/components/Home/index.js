@@ -52,9 +52,9 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home-page">
-        <Banner 
-          onSearchBoxUpdate={this.props.onSearchBoxUpdate} 
-          onGetPartClicked={this.props.onGetPartClicked} 
+        <Banner
+          onSearchBoxUpdate={this.props.onSearchBoxUpdate}
+          onGetPartClicked={this.props.onGetPartClicked}
           isGetPartClicked={this.props.isGetPartClicked}
         />
 
