@@ -9,7 +9,7 @@ const ItemList = (props) => {
 
   if (props.items.length === 0) {
     if (props.searchTerm) {
-      return <div>No result for {props.searchTerm}!</div>;
+      return <div id="empty">No result for {props.searchTerm}!</div>;
     } else {
       return <div className="py-4 no-items">No items are here... yet.</div>;
     }
