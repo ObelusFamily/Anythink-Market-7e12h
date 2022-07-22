@@ -46,6 +46,7 @@ const reducer = (state = {}, action) => {
         tab: null,
         tag: action.tag,
         currentPage: 0,
+        searchTerm: null,
       };
     case SEARCH_BOX_UPDATED:
       return {
@@ -56,6 +57,7 @@ const reducer = (state = {}, action) => {
         tab: null,
         tag: null,
         currentPage: 0,
+        searchTerm: action.searchTerm,
       };
     case HOME_PAGE_LOADED:
       return {
@@ -66,6 +68,7 @@ const reducer = (state = {}, action) => {
         itemsCount: action.payload[1].itemsCount,
         currentPage: 0,
         tab: action.tab,
+        searchTerm: null,
       };
     case HOME_PAGE_UNLOADED:
       return {};
@@ -78,6 +81,7 @@ const reducer = (state = {}, action) => {
         tab: action.tab,
         currentPage: 0,
         tag: null,
+        searchTerm: null,
       };
     case PROFILE_PAGE_LOADED:
     case PROFILE_FAVORITES_PAGE_LOADED:
