@@ -59,7 +59,7 @@ const reducer = (state = {}, action) => {
         currentPage: 0,
         searchTerm: action.searchTerm,
       };
-    case HOME_PAGE_LOADED:
+    case HOME_PAGE_LOADED: // eslint-disable-line no-duplicate-case
       return {
         ...state,
         pager: action.pager,
